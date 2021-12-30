@@ -1,0 +1,41 @@
+.quote {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    opacity: 0;
+    transform: scale(85%);
+    transition: 2s;
+}
+
+.quote--zoom {
+    opacity: 1;
+    transform: (100%);
+    transition: 2s;
+}
+
+.quote_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 30px; */
+    justify-content: space-between;
+}
+
+.quote_text {
+    text-align: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .quote {
+        flex-direction: column;
+        background-color : rgb(236, 236, 236);
+    }
+
+    .quote {
+        margin: 10px;
+    }
+
+}
