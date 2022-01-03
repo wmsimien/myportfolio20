@@ -1,0 +1,81 @@
+.resume-title {
+    /* padding: 4rem; */
+position: relative;
+  /* left: 50px; */
+  /* width: 250px; */
+  /* height: 120px; */
+  /* border: 3px solid green; */
+    /* background: rgb(230, 170, 170); */
+    /* display: flex; */
+    display: flex;
+    /* align-items: left; */
+    margin-top: -640px;
+    margin-left: 15px;
+    margin-bottom: 55px;
+    /* flex: 1; */
+    /* margin-top: 4rem; */
+    /* border-radius: 10px; */
+    /* display: flex; */
+    /* flex-flow: row; */
+    /* align-items: center; */
+    /* max-width: 1120px;   */
+    /* width: 80%; */
+    /* margin: 0; */
+    /* display: flex; */
+    /* height: 90vh; */
+    /* align-items: left; */
+    /* justify-content: left; */
+    /* font-size: 1rem; */
+    /* top: 0; */
+    /* width: 400px; */
+    /* height: 400px; */
+    /* border: 2px solid black; */
+    /* box-shadow: 2px 2px 5x black; */
+    /* border-radius: .25rem; */
+    /* display: grid;
+    place-content: center; */
+
+    /* width: 100%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-grow: 1; */
+    /* justify-content: flex-start; */
+    /* align-items: left; */
+    /* overflow-y: auto; */
+    
+}
+ 
+/* .resume-item {
+   
+} */
+
+/* resume h1 {
+    text-align: center;
+} */
+
+/* ul {
+    width: 100%;
+    list-style: circle inside;
+    padding: 0.25rem 0.25rem;
+    left: 150px;
+  } */
+
+  span {
+    /* display: inline; */
+    margin-top: 2em;
+    margin-bottom: 5em;
+    /* margin-left: 0;
+    /* margin-right: 0; */
+    padding-left: 30px; 
+    
+  }
+
+  ul { 
+    display: block;
+    list-style-type: circle inside;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+  }

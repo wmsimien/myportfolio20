@@ -1,13 +1,18 @@
 import React from 'react'
 import '../Footer/Footer.css';
+import { SiGithub } from "react-icons/si";
+
+
 
 const Footer = () => {
     return (
         <footer>
             <div>
-                {/* <h6 class="col-6" id="contact-me">Contact Information: </h6>  */}
-                <a href="https://github.com/wmsimien" target="_blank">Contact Me at GitHub</a>
-                  
+                <a href="https://github.com/wmsimien" 
+                    target="_blank" 
+                    rel="noreferrer">
+                    <SiGithub size={40}/>
+                </a>             
             </div>
         </footer>
     )

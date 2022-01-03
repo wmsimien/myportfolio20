@@ -1,28 +1,34 @@
 .contact {
   /* border: 2px solid lightcoral;  */
+  padding: 1rem;
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
   position: relative;
-    /* display: flex; */
-  margin-top: -350px;
+  /* display: flex; */
+  margin-top: -500px;
   /* margin-top: -400px; */
-
+  width: 70%;
+  /* align-content: center; */
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
-.contact_form{
-    width: 70%;
-    height: 100%; /*400px; */
+.contact-form{
+  margin-left: 5px;
+    /* width: 70%; */
+  height: 100%; /*400px; */
     /* border: 2px solid lightcoral; */
-    box-shadow: 2px 2px 5x lightcoral;
-    border-radius: .25rem;
+  box-shadow: 2px 2px 5x lightcoral;
+  border-radius: .25rem;
     /* display: grid; */
-    justify-content: left;
+  justify-content: left;
 }
 
-.contact_title {
-  margin-top: -55px;
+.contact-title {
+  text-align: left;
+  margin-top: -50px;
   color: rgb(170, 92, 92);
 }
   
@@ -30,10 +36,10 @@ label {
     /* position: absolute; */
     /* left: -99999px; */
     /* float: left; */
-    width: 25%;
-    margin-top: 6px;
-    padding: 12px 12px 12px 0;
-    display: inline-block;
+  width: 25%;
+  margin-top: 6px;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
   
   /* input[type='text'] {
@@ -60,7 +66,7 @@ label {
   /* } */ 
 
   input[type=text], select, textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -78,7 +84,7 @@ label {
   } */
 
   textarea {
-    width: 100%;
+    width: 80%;
     height: 150px;
     padding: 12px 20px;
     /* box-sizing: border-box; */
@@ -97,6 +103,7 @@ label {
     background-color: aliceblue;
     color: mediumblue;
     cursor: pointer;
+    
   }
 
 button:focus, 

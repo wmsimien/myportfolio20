@@ -11,15 +11,15 @@ footer {
     font-size: 1.5rem; 
   }
 
-footer a:link {
-    color: green;
-    text-decoration: none;
+footer a {
+    margin-left: 215px;
 }
+
 footer a:visited {
-    color: hotpink;
+    color: rgb(218, 177, 16);
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: rgb(12, 199, 12);
 }

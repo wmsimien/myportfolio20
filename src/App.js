@@ -1,12 +1,10 @@
-import PortfolioContainer from './components/PortfolioContainer';
 import './App.css';
-// import './assets/hero.jpg';
-// import Hero from './components/Hero';
+import Header from './components/Header/Header';
 
-// render single instances of the following components
+// render Header component
 function App() {
   return (
-    <PortfolioContainer />
+    <Header />
   );
 }
 

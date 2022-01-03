@@ -11,6 +11,8 @@ console.log(learningQuotes);
     });
 
     return (
+        <>
+        <h1 className="home_title">Wanda M Avery's Portfolio</h1>
         <div className={inView ? "quote quote--zoom" : "quote"} ref={ref} key={ref}>
             {learningQuotes.map((el) => {
                 return (
@@ -21,6 +23,7 @@ console.log(learningQuotes);
                 );
             })}    
         </div>
+        </>
     )
 }
 

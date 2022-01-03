@@ -11,13 +11,11 @@ const Navbar = ({ navbarLinks, handlePageChange }) => {
     const toggleMenuClick = () => {
         setMenuClick(!menuClick);
     };
-
+    // const closeMobileMenu = () => setMenuClick(false);
     return (
         <nav className="navbar">
-            <span className="navbar_logo">Wanda M Avery's Portfolio</span>
-
-            {menuClick ? (<FiMenu size={25} className="navbar_menu" 
-                onClick={toggleMenuClick} />) : (<FiX size={25} className="navbar_menu" 
+            {menuClick ? (<FiMenu size={35} className="navbar_menu" 
+                onClick={toggleMenuClick} />) : (<FiX size={35} className="navbar_menu" 
                 onClick={toggleMenuClick} />
             )}
             <ul className={menuClick ? "navbar_list" : "navbar_list navbar_list--active"}>

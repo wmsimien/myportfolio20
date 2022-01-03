@@ -1,12 +1,13 @@
 .about {
     display: flex;
     align-items: left;
-    margin-top: -400px;
+    margin-top: -630px;
 }
 
 .about_image {
     width: 30%;
     margin-top: 50px;
+    margin-bottom: 78px;
 }
 
 .about_content {
@@ -21,6 +22,7 @@
 .about_title {
     text-align: left;
     margin-top: -10px;
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 800px) {
@@ -31,6 +33,7 @@
 
     .about_image {
         width: 100%;
+        /* margin-bottom: 78px; */
     }
 
     .about_title {
