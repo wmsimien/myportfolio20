@@ -1,13 +1,13 @@
 .about {
     display: flex;
     align-items: left;
-    margin-top: -630px;
+    margin-top: -629px;
 }
 
 .about_image {
     width: 30%;
     margin-top: 50px;
-    margin-bottom: 78px;
+    margin-bottom: 100px;
 }
 
 .about_content {
@@ -25,15 +25,18 @@
     margin-left: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     .about {
         flex-direction: column;
         background-color : rgb(236, 236, 236);
+        margin-bottom: 65px; 
+        margin-top: -519px;
     }
 
     .about_image {
-        width: 100%;
-        /* margin-bottom: 78px; */
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 100px;
     }
 
     .about_title {
@@ -41,3 +44,10 @@
         margin-top: -5px;
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .about {
+        margin-top: -419px;
+        margin-bottom: 65px;  
+    }
+  }

@@ -8,8 +8,7 @@ const Resume = () => {
             <>
                 <h1 className="resume-title">Resume</h1>
                 <div className="resume-item">
-                <span>Download my</span> <a href="#">resume</a>
-                {/* <h2 className="resume-subtitle">Front End Proficiencies</h2> */}
+                <span>Download my</span> <a href="#home">resume</a>
                     <ul>
                        <h4>Front-End Proficiencies</h4>
                             <ul>
@@ -19,12 +18,14 @@ const Resume = () => {
                                 <li>JQuery</li>
                                 <li>React</li>
                                 <li>Bootstrap</li>
+                                <li>Materialize</li>
                                 <li>Template Languages</li>
                                     <ul>
                                         <li>HandleBars</li>
-                                        <li>EJS</li>
+                                        <li>Embedded JavaScript (EJS)</li>
                                     </ul>
                             </ul>
+                        <ul></ul>
                         <h4>Backend-End Proficiencies</h4>
                             <ul>
                                 <li>REST API</li>
@@ -36,7 +37,7 @@ const Resume = () => {
                                     <ul>
                                         <li>Sequelize</li>
                                     </ul>
-                                <li></li>
+                                <li>GraphQL</li>
                             </ul>
                     </ul>    
                 </div>
@@ -46,10 +47,7 @@ const Resume = () => {
     };
 
     return (
-        <div>
-            {renderContent()}
-            
-        </div>
+        <div>{renderContent()}</div>
     )
 }
 

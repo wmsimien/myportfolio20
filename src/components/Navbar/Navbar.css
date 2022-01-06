@@ -41,7 +41,6 @@
 }
 
 .navbar_link:hover {
-    /* border-color: white; */
     color: goldenrod;
     font-size: 30px;
     transition: 250ms;

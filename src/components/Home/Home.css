@@ -10,7 +10,7 @@
 .quote {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 0px;
     opacity: 0;
     transform: scale(85%);
     transition: 2s;

@@ -1,90 +1,74 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import '../Contact/Contact.css';
+
 
 const Contact = () => {
 
-    // create and set state variables
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    // create and set state and ref variables
+    const nameInputRef = useRef(); 
+    const emailInputRef = useRef(); 
+    const messageInputRef = useRef();
     const [warning, setWarningMessage] = useState('');
-
-    const handleChange = (e) => {
-        // change name of element which triggered event
-        // and set value accordingly
-        if (e.target.name === 'name'){
-            setName(e.target.value);   
-        } else if (e.target.name === 'email') {
-            setEmail(e.target.value);
-        } else {
-            setMessage(e.target.value);
-        }
-    }
 
     // handle submitting of the form data
     const handleOnSubmit = (e) => {
-        e.preventDefault()
-        setWarningMessage('');
-        // check data entered
-        if (!name && !email) {
-            setWarningMessage('You must enter a name and email address...Thanks!');
-            return;
-        } 
-        if (email) {
+        // prevent default refresh
+        e.preventDefault();
+        // obtain entered data elements
+        const enteredName = nameInputRef.current.value;
+        const enteredEmail = emailInputRef.current.value; 
+        const enteredMessage = messageInputRef.current.value;
+
+        if (enteredEmail) {
             // pattern to match against
             let pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            console.log(!pattern.test(String(email).toLowerCase()));
-            if (!pattern.test(String(email).toLowerCase())){
+            console.log(!pattern.test(String(enteredEmail).toLowerCase()));
+            if (!pattern.test(String(enteredEmail).toLowerCase())){
                 setWarningMessage('You must a valid email address...Thanks!');
                 return;
             }
         }
-       if (!message) {
-            setWarningMessage('A message must be entered...Thanks!');
-            return;
-        } else {
-            setWarningMessage('Thank you for your message...it will be handled in the future.');
-            // setName('');
-            // setEmail('');
-            // setMessage('');
-            // return;
-        }
-        // reset variables
-        setName('');
-        setEmail('');
-        setMessage('');
+
+        // just for fun...save in local storage
+        localStorage.setItem('contactName', JSON.stringify(enteredName));
+        localStorage.setItem('contactemail', JSON.stringify(enteredEmail));
+        localStorage.setItem('contactmessage', JSON.stringify(enteredMessage));
+      
+        setWarningMessage('Thank you for your message...it is currently being saved in your local storage.');
+   
     }
     
     const renderContent = () => {
         return (
             <>
-                <form>
+                <form onSubmit={handleOnSubmit}>
                     <div className="contact-form">
-                        <label>Name:</label>
+                        <label htmlFor="name">Name:</label>
                         <input 
                             autoFocus
+                            required
                             type="text" 
                             placeholder="name" 
                             name="name"
-                            value={name}
-                            onChange={handleChange}
+                            ref={nameInputRef}
                         />
                     </div>
                     <div className="contact-form">
-                        <label>Email Address:</label>
+                        <label htmlFor="email">Email Address:</label>
                         <input type="text" 
+                            required
                             placeholder="email" 
                             name="email"
-                            value={email}
-                            onChange={handleChange}
+                            ref={emailInputRef}
                             />
                     </div>
                     <div className="contact-form">
-                        <label>Message:</label>
+                        <label htmlFor="message">Message:</label>
                         <textarea
-                            value={message}
+                            required
                             name="message"
-                            onChange={handleChange}
+                            rows='5'
+                            ref={messageInputRef}
                         />
                     </div>
                     {warning && (
@@ -92,19 +76,20 @@ const Contact = () => {
                         <p className="warning-text">{warning}</p>
                     </div>
                     )}
-                    <button type="button" onClick={handleOnSubmit}>
-                        Submit
-                    </button>
+                    <button>Submit</button>
                 </form>
             </>
         )
     }
 
     return (
+        <>
+        {/* <h1 className="contact-title">Contact Me</h1> */}
         <div className="contact">
             <h1 className="contact-title">Contact Me</h1>
             {renderContent()} 
         </div>
+        </>
     )
 }
 

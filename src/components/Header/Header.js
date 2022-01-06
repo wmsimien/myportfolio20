@@ -6,16 +6,18 @@ import Project from '../Portfolio/Project.js';
 import Home from '../Home/Home.js';
 import Hero from '../Hero/Hero';
 import hero from '../../assets/hero.jpg';
+import hero2 from '../../assets/hero2.jpg';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer.js';
 import self from '../../assets/self.jpg';
+import self2 from '../../assets/self2.png';
 import nature from '../../assets/nature.jpg';
 import climate from '../../assets/climatedb.jpg';
 import planner from '../../assets/dayplanner.jpg';
 import dmiss from '../../assets/dontmiss.jpg';
 
 
-const PortfolioContainer = () => {
+const Header = () => {
 
     const [currentPage, setCurrentPage] = useState('Home');
    
@@ -34,6 +36,42 @@ const PortfolioContainer = () => {
     
     //  array of works/projects
     const projects = [
+        {
+            imageSrc: nature,
+            alt: 'Tree of Life',
+            title: 'Grounded',
+            desc: `Grounded is a browser application giving users the flexible to be 
+            'Grounded' in all categories/events/places in life.  Users have the ability to add
+            categories/events/places of their choosing to the 'Search Category' dropdown via the 
+            'Enter A New Category' section.  When the the 'Add Category' button
+            is clicked the new category will be added to local storage and the listing
+            for later use via the dropdown.  Users will then enter a US city and state to fulfill the 
+            search criteria.  TomTom's fuzzy search is utilized to return the criteria search and
+            the address, phone number, and website, if this information is available will be displayed.  
+            A 'Map It' button will appear allowing users to view the location of the place/event and 
+            a marker will be placed on the map as an indicator.  All possible with TomTom's map object.  
+            Enjoy staying 'Grounded' (connected).`, 
+            deployedLink: 'https://wmsimien.github.io/grounded/', 
+            gitHubLink: 'https://github.com/wmsimien/grounded.git'
+        },
+        {
+            imageSrc: nature,
+            alt: 'Tree of Life',
+            title: 'Grounded',
+            desc: `Grounded is a browser application giving users the flexible to be 
+            'Grounded' in all categories/events/places in life.  Users have the ability to add
+            categories/events/places of their choosing to the 'Search Category' dropdown via the 
+            'Enter A New Category' section.  When the the 'Add Category' button
+            is clicked the new category will be added to local storage and the listing
+            for later use via the dropdown.  Users will then enter a US city and state to fulfill the 
+            search criteria.  TomTom's fuzzy search is utilized to return the criteria search and
+            the address, phone number, and website, if this information is available will be displayed.  
+            A 'Map It' button will appear allowing users to view the location of the place/event and 
+            a marker will be placed on the map as an indicator.  All possible with TomTom's map object.  
+            Enjoy staying 'Grounded' (connected).`, 
+            deployedLink: 'https://wmsimien.github.io/grounded/', 
+            gitHubLink: 'https://github.com/wmsimien/grounded.git'
+        },
         {
             imageSrc: nature,
             alt: 'Tree of Life',
@@ -106,7 +144,7 @@ const PortfolioContainer = () => {
                     learningQuotes={learningQuotes}
                     />;
             case 'About':
-                return <About imageSrc={self}/>;
+                return <About imageSrc={self2}/>;
             case 'Contact':
                 return <Contact />;
             case 'Resume':
@@ -140,13 +178,15 @@ const PortfolioContainer = () => {
                     navbarLinks={navbarLinks}
                     handlePageChange={handlePageChange}
                 />
-                <Hero imageSrc={hero} />  
+                <Hero imageSrc={hero2} />  
                 
                 {renderPage()}
             </section>
-            <Footer />
+            <section>
+                <Footer />
+            </section>   
         </>
     )
 }
 
-export default PortfolioContainer
+export default Header;
