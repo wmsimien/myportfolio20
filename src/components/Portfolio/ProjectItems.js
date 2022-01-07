@@ -9,7 +9,7 @@ const ProjectItems = ({ imgSrc, label, deployedLink, gitHubLink }) => {
                 <a className="cards-item-anchor" href={gitHubLink}><GoMarkGithub size={40}/></a>
                 <a href={deployedLink} className="cards-item-link">        
                     <figure className="cards-item-pic-wrap" data-category={label}>
-                        <img src={imgSrc} className="cards-item-img" />
+                        <img src={imgSrc} className="cards-item-img" alt={label}/>
                     </figure>
                     <div className="cards-item-info">
                         <h5 className="cards-item-text">{label}</h5>
