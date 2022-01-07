@@ -24,7 +24,7 @@
   ## Usage  
   The collection of web applications showcasting some of the various technologies learned during bootcamp up to this moment in time. Via the Portfolio menu option, each application will execute/run via clickin the image on it's on hosted medium. 
 
-  ![MyPortfolio](./public/images/dontmiss.jpg)
+  ![MyPortfolio](./public/myportfolio20.jpg)
   
   ## Credits
      DL Avery                
