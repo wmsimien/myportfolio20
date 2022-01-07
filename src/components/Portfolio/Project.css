@@ -1,19 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .project-heading {
-  margin-top: -675px;
-  padding: 30px;
+    margin-top: -660px;
+    padding: 30px;
 }
 
 .cards {
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: row;
-  /* padding: 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4rem;
+    background: #fff; 
+ }
+
+.cards-container {
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 0 auto; 
+    justify-content: space-between;
+}
+
+
+.cards-items {
+    margin-bottom: 24px;
+}
+
+/* projectitems start here */
+.cards-item {
+    flex: 1;
+    margin: 0 1rem;
+    border-radius: 10px;
 }
 
 .cards-item-link {
     display: flex;
     flex-flow: column;
-    width: 80%;
+    width: 100%;
     box-shadow: 0 6px 20px rgba(190, 127, 32, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(190, 127, 32, 0.017));
     filter: drop-shadow(0 6px 20px rgba(190, 127, 32, 0.017));
@@ -23,36 +49,54 @@
 }
 
 .cards-item-pic-wrap {
-  position: relative;
-  width: 100%;
-  padding-top: 67%;
-  padding-top: 1.25%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-left: 1.50%;
+    padding-top: 1.25%;
+    overflow: hidden;
 }  
- 
+  
+.cards-item-img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    object-fit: cover;
+    transition: all 0.2s linear; 
+}
+  
+.cards-item-img:hover {
+    transform: scale(.9);
+}
+   
 .cards-item-info {
-  padding: 20px 30px 30px;
+    padding: 20px 30px 30px;
 }
-  
+    
 .cards-item-text { 
-  color: #d86b0c;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center
+    color: #d86b0c;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center 
 }
-
+  
 .cards-item-anchor {
-  color: rgb(0, 195, 255);
+    color: rgb(0, 195, 255);
 }
+  
+    
+  @media only screen and (min-width: 1024px) {
+ 
 
+    .cards-container {
+        display: flex;
+    }
   
-@media only screen and (min-width: 1024px) {
-  .cards {
+    .cards-items {
       display: flex;
-      padding: 1rem;
+      margin-left: 0px;
+      padding-left: 0px;
+      margin-bottom: 2rem;
+    }
+
   }
-  .project-heading {
-    padding: 30px;
-  }
-}
-  

@@ -13,8 +13,8 @@ const Project = ( { projects }) => {
                 {projects.map((project) => {
                 return (           
                     <div className="cards-container" key={project.title}>
-                        <div>
-                            <div>
+                        <div className="cards-wrapper">
+                            <div className="cards-items">
                                 <ProjectItems
                                     imgSrc={project.imageSrc}
                                     label={project.title}

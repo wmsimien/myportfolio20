@@ -8,7 +8,7 @@ const ProjectItems = ({ imgSrc, label, deployedLink, gitHubLink }) => {
             <div className="cards-item">
                 <a className="cards-item-anchor" href={gitHubLink}><GoMarkGithub size={40}/></a>
                 <a href={deployedLink} className="cards-item-link">        
-                    <figure className="cards-item-pic-wrap">
+                    <figure className="cards-item-pic-wrap" data-category={label}>
                         <img src={imgSrc} className="cards-item-img" />
                     </figure>
                     <div className="cards-item-info">
